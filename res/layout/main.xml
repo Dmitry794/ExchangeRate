@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="#ff3f4d55">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/caption"
+                  android:orientation="horizontal" android:background="#ffffffff" android:paddingBottom="1dp">
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:background="#ff1b9393">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Курс USD"
+                android:id="@+id/tx_title" android:padding="8dp" android:textStyle="bold"/>
+
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Покупка"
+            android:id="@+id/tx_buy"
+            android:textColor="#ff6be970" android:layout_centerVertical="true" android:layout_alignParentRight="false"
+            android:layout_below="@+id/tx_sell"
+            android:layout_alignLeft="@+id/tx_sell" android:background="#ff434343" android:paddingLeft="5dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Продажа"
+            android:id="@+id/tx_sell"
+            android:textColor="#fff7714d" android:layout_alignParentTop="true" android:layout_alignParentRight="true"
+            android:background="#ff434343" android:paddingRight="5dp" android:paddingLeft="5dp"/>
+    </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="visible" android:id="@+id/preloader"
+                    android:background="#ffffffff">
+    <RelativeLayout android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="visible">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Загрузка..."
+                android:id="@+id/tx_preloader" android:layout_centerInParent="true"
+                android:background="#ff1b9393" android:paddingLeft="30dp" android:paddingTop="3dp"
+                android:paddingRight="20dp" android:paddingBottom="6dp"/>
+    </RelativeLayout></RelativeLayout>
+
+    <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Обновить"
+            android:id="@+id/bt_update" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"
+            android:background="#ff1b9393"
+            android:textColor="#ffffffff" android:textSize="15sp" android:padding="8dp"/>
+    <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bank_list" android:layout_alignParentTop="false" android:layout_centerHorizontal="true"
+            android:layout_above="@+id/bt_update" android:layout_below="@+id/caption"/>
+</RelativeLayout>
+

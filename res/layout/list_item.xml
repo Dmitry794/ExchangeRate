@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:background="#ffffffff"
+                >
+    <RelativeLayout android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent" android:background="#ff434343" android:paddingBottom="7dp"
+                    android:paddingTop="5dp" android:paddingRight="5dp" android:layout_marginBottom="1dp">
+
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Name"
+                android:id="@+id/tx_name" android:layout_alignParentLeft="true" android:layout_marginLeft="10dp"
+                android:layout_alignParentTop="true" android:layout_marginTop="0dp" android:textSize="20dp"
+                android:layout_toLeftOf="@+id/tx_kurs0"/>
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Address"
+                android:id="@+id/tx_address"
+                android:layout_marginTop="5dp" android:layout_marginLeft="10dp" android:textSize="12dp"
+                android:layout_below="@+id/tx_name" android:layout_toLeftOf="@+id/tx_kurs0"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="0.000"
+                android:id="@+id/tx_kurs0"
+                android:layout_alignParentRight="true"
+                android:textColor="#ff6be970" android:layout_below="@+id/tx_kurs1"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="0.000"
+                android:id="@+id/tx_kurs1" android:layout_alignLeft="@+id/tx_kurs0"
+                android:textColor="#fff7714d" android:layout_alignTop="@+id/tx_name"/>
+    </RelativeLayout>
+</LinearLayout>
